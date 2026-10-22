@@ -1,3 +1,4 @@
+"""Reglas de precios del gimnasio."""
 from decimal import Decimal
 
 GROUP_FACTOR = Decimal("0.90")
