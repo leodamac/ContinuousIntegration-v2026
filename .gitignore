@@ -49,3 +49,4 @@ htmlcov/
 # --- Archivos del Sistema Operativo ---
 .DS_Store
 Thumbs.db
+__pycache__/test_pricing_rules.cpython-314-pytest-9.1.1.pyc
