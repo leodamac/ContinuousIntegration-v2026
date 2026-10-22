@@ -1,0 +1,51 @@
+# --- Entornos Virtuales y Dependencias ---
+.venv/
+venv/
+ENV/
+env/
+bin/
+lib/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- Caché y Compilación de Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# --- Pruebas y Cobertura (Testing & Coverage) ---
+.pytest_cache/
+.cache/
+.htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# --- Configuraciones del Entorno Local y Secretos ---
+.env
+.venv
+.env.local
+.secrets
+
+# --- Archivos del Sistema Operativo ---
+.DS_Store
+Thumbs.db
