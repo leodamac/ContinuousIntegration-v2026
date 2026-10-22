@@ -1,4 +1,4 @@
-"""Catálogo y validación de planes y extras del gimnasio (R1 y R2)."""
+"""Catálogo, validación y subtotal del gimnasio (R1, R2 y R3)."""
 
 PRECIOS_PLANES = {
     "BASIC": 30,
@@ -44,3 +44,20 @@ def obtener_precio_extras(plan: str, extras: list[str]) -> int:
         seleccion.add(extra)
 
     return sum(PRECIOS_EXTRAS[extra] for extra in seleccion)
+
+
+def calcular_subtotal(plan: str, extras: list[str], miembros: int) -> int:
+    """Calcula (plan + extras) por miembros, o -1 si la selección es inválida.
+
+    La cantidad de miembros debe ser un entero positivo. No aplica
+    descuentos, recargos ni redondeo.
+    """
+    if isinstance(miembros, bool) or not isinstance(miembros, int) or miembros < 1:
+        return -1
+
+    precio_plan = obtener_precio_plan(plan)
+    precio_extras = obtener_precio_extras(plan, extras)
+    if precio_plan == -1 or precio_extras == -1:
+        return -1
+
+    return (precio_plan + precio_extras) * miembros
