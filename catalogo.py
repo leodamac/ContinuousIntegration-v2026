@@ -28,8 +28,9 @@ def obtener_precio_extras(plan: str, extras: list[str]) -> int:
         seleccion.add(extra)
 
     return sum(PRECIOS_EXTRAS[extra] for extra in seleccion)
+    
+    
 """Catálogo y validación de planes del gimnasio (R1)."""
-
 PRECIOS_PLANES = {
     "BASIC": 30,
     "STANDARD": 45,
